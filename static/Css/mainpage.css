@@ -121,7 +121,8 @@ h1{
     max-width: 1000px;
     height: 400px;
     object-fit: cover;
-    object-position: bottom left;
+    object-position: bottom center;
+
   }
   #img_min{
       border-inline-start: rgb(22, 22, 22) 2px;
