@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Css/about.css') }}" />
+    <title>Sars-Cov-Identifier</title>
+</head>
+<body .dark-mode>
+    <script> function darkmode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }</script>
+    <h1>Sars-Cov Identifier</h1>
+    <label title="Dark Mode" class="switch">
+        <input onclick="darkmode()" type="checkbox">
+        <span class="slider round">
+        </span>
+    </label>
+    <h2 style= "color:white;" align="center" ></h2>
+    <p style="color:rgb(61, 198, 252)"; > Github: <a href="https://github.com/Lhimbo/Sars-cov-Identifier">https://github.com/Lhimbo/Sars-cov-Identifier</a>
+</body>
+</html>

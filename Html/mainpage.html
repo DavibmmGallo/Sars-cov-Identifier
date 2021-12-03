@@ -9,14 +9,24 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Css/mainpage.css') }}" />
 </head>
 
-<body>
+<body .dark-mode>
     <h1>Sars-Cov Identifier</h1>
+    <label title="Dark Mode" class="switch">
+        <input onclick="darkmode()" type="checkbox">
+        <span class="slider round">
+        </span>
+    </label>
+      
     <!-- Container for the image gallery -->
     <script>
-        function opentab(str){
+        function darkmode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+        function opentab(str) {
             window.open(str);
         }
-        function changetab(str){
+        function changetab(str) {
             window.location.pathname = str
         }
         var slideIndex = 1;
@@ -50,11 +60,12 @@
             captionText.innerHTML = dots[slideIndex - 1].alt;
         }
     </script>
-    
+
     <div class="menu">
-        <button class="actionbtn" onclick="opentab('https://www.google.com/search?&q=sintomas+do+covid')">Quais são os sintomas da Covid</button>
+        <button class="actionbtn" onclick="opentab('https://www.google.com/search?&q=sintomas+do+covid')">Quais são os
+            sintomas da Covid</button>
         <button class="actionbtn" onclick="changetab('/analizar')">Analizar</button>
-        <button class="actionbtn" onclick="changetab('/sobre')">Sobre</button>        
+        <button class="actionbtn" onclick="changetab('/sobre')">Sobre</button>
     </div>
 
     <div class="container">
@@ -62,7 +73,7 @@
         <!-- Full-width images with number text -->
         <div class="mySlides">
             <div class="numbertext">1 / 3</div>
-            <img id="img_max" src="{{ url_for('static', filename='img/covid_xray.png') }}" style="width:100%" >
+            <img id="img_max" src="{{ url_for('static', filename='img/covid_xray.png') }}" style="width:100%">
         </div>
 
         <div class="mySlides">
@@ -72,7 +83,8 @@
 
         <div class="mySlides">
             <div class="numbertext">3 / 3</div>
-            <img id="img_max" src="{{ url_for('static', filename='exp32/exp32/confusion_matrix.png') }}" style="width:100%">
+            <img id="img_max" src="{{ url_for('static', filename='exp32/exp32/confusion_matrix.png') }}"
+                style="width:100%">
         </div>
 
         <!-- Next and previous buttons -->
@@ -87,21 +99,22 @@
         <!-- Thumbnail images -->
         <div class="row">
             <div class="column">
-                <img id="img_min" class="demo cursor" src="{{ url_for('static', filename='img/covid_xray.png') }}" style="width:100%" onclick="currentSlide(1)"
-                    alt="Covid raio-x">
+                <img id="img_min" class="demo cursor" src="{{ url_for('static', filename='img/covid_xray.png') }}"
+                    style="width:100%" onclick="currentSlide(1)" alt="Covid raio-x">
             </div>
             <div class="column">
-                <img id="img_min" class="demo cursor" src="{{ url_for('static', filename='img/normal.jpeg') }}" style="width:100%" onclick="currentSlide(2)"
-                    alt="Normal raio-x">
+                <img id="img_min" class="demo cursor" src="{{ url_for('static', filename='img/normal.jpeg') }}"
+                    style="width:100%" onclick="currentSlide(2)" alt="Normal raio-x">
             </div>
             <div class="column">
-            <img id="img_min" class="demo cursor" src="{{ url_for('static', filename='exp32/exp32/confusion_matrix.png') }}" style="width:100%" onclick="currentSlide(3)"
-                    alt="Analise raio-x">
+                <img id="img_min" class="demo cursor"
+                    src="{{ url_for('static', filename='exp32/exp32/confusion_matrix.png') }}" style="width:100%"
+                    onclick="currentSlide(3)" alt="Analise raio-x">
             </div>
         </div>
     </div>
 
-  
+
 
 </body>
 

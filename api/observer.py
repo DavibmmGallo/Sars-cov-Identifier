@@ -43,6 +43,7 @@ class MyHandler(FileSystemEventHandler):
         file_name_with_extension = str(event.src_path).split('.')
         extension = file_name_with_extension[-1]
         nfilename = f'{uuid.uuid1()}.{extension}'
+        #substituir upload por images pra funfar
         os.rename(event.src_path,os.getcwd() + f"\\upload\\{nfilename}" )
         mainsub.run()
 

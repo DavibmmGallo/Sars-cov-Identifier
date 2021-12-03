@@ -9,10 +9,22 @@
     <title>Sars-Cov-Identifier</title>
 </head>
 
-<body>
+<body .dark-mode>
     <h1>Sars-Cov Identifier</h1>
-
+    <div>
+        <label title="Dark Mode" class="switch">
+            <input onclick="darkmode()" type="checkbox">
+            <span class="slider round">
+                <i class="fas fa-moon"></i>
+		    <i class="fas fa-sun"></i>
+            </span>
+        </label>
+    <div>
     <script>
+        function darkmode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
         function opentab(str) {
             window.open(str);
         }
